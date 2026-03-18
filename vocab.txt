@@ -1,0 +1,37 @@
+# Object-oriented programming (OOP) - A popular style of programming that organizes 
+    software design around objects, which are instances of classes. 
+
+# OBJECT - A software model, created from a CLASS, that bundles the data (attributes) and 
+    operations (methods) relevant for modeling a concept or idea.  
+
+# CLASS - A class is a blueprint, or template, for creating software objects. 
+    Custom classes are TYPES, just like Turtles, integers, and strings are types.
+    An object created from a class is an INSTANCE.
+
+# CONSTRUCTOR - Every class should have a method with the special name __init__. 
+    This initializer method, often referred to as the constructor, is a special method that is automatically called whenever a new instance of a class is created.
+    It's the method that "constructs" the objects, thus the name.
+
+# ATTRIBUTES - data stored inside an object that persist
+    throughout the life of the object. Also called instance variables.  
+    They are created in the constructor and are accessed anywhere in
+    the class using 'self' (i.e., scoped to the object).
+
+# METHODS - written and behave just like a function, except that it is 
+    invoked on a specific instance. Must have a 'self' parameter.
+
+# SELF - The self parameter (you could choose another name, but nobody ever does!) is a variable automatically set to reference the newly-created object. 
+    You do not explicitly pass any arguments to the self parameter; it is done implicitly for you.
+    Ask yourself - "Which Critter is talking?"
+    e.g. If the there is a Critter object named Jerry  
+    stored in the reference variable 'jerry', then 'self' 
+    is referring to Jerry when jerry.talk() is executed.
+
+# STRING METHOD - creates a string representation of your object and returns it; 
+    #     typically the string will contain a description of all the attributes 
+    #     of an object.  
+    #     All objects should include a string method and you are required to follow 
+    #       the def __str__(self): method header naming scheme. 
+    #     The returned string will now display when the object is printed.
+    #     Python also includes a __repr__ method that is similar to __str__, 
+    #       but is used for debugging and development purposes.

@@ -50,6 +50,6 @@ def main():
     print("\nPrinting crit2:")
     print(crit2)
     
-    # show in http://pythontutor.com/
+    
 
 main()
