@@ -30,8 +30,13 @@
 # STRING METHOD - creates a string representation of your object and returns it; 
     #     typically the string will contain a description of all the attributes 
     #     of an object.  
-    #     All objects should include a string method and you are required to follow 
+    #     All objects should include AKA  a string method and you are required to follow 
     #       the def __str__(self): method header naming scheme. 
     #     The returned string will now display when the object is printed.
     #     Python also includes a __repr__ method that is similar to __str__, 
     #       but is used for debugging and development purposes.
+
+# ACCESSOR methods (getters) and MUTATOR methods (setters) can be added 
+#       to a class to access and modify the attributes of an object.  
+#       For example, a get_name method to return the name of a Critter and a 
+#       set_name method to change the name of a Critter.
