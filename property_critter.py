@@ -1,48 +1,40 @@
 # Property Critter
-# Demonstrates a PROPERTY, an object with methods that allow indirect access
-#   to attributes and often impose some sort of restriction on that access.
-#
+# Demonstrates a PROPERTY in Python, which is a special kind of attribute that 
+# computes its value when accessed.  A property is defined using the 
+# @property decorator and a method that calculates the value of the property.
 
 class Critter(object):
     """A virtual pet"""
+
     def __init__(self, name):
-        print("A new critter has been born!")
-        self.__name = name
+        """Initializes the Critter's attributes"""
+        self.name = name
+        self.age = 0
+        self.mood = "happy"
+        print("\nA new critter",self.name,"has been born and is", self.age, "years old!")
 
-    @property  # property decorator controls access to private attribute __name
-    def name(self):  # method (name) has same name as property (name)
-        """Returns a private attribute (and gives indirect access to it)"""
-        return self.__name
-    
-    @name.setter  # decorator accesses the setter attribute of 'name' property
-    def name(self, new_name):
-        """Method called when attempting to set a new value for 'name' property"""
-        if new_name == "": # handles attempting to rename to an empty string
-            print("A critter's name can't be an empty string.")
+    # A property is defined using the @property decorator 
+    #   and a method that calculates the value of the property.
+    @property
+    def mood_description(self): 
+        """Returns a description of the Critter's mood"""
+        if self.mood == "happy":
+            return f"{self.name} is feeling happy and content."
+        elif self.mood == "sad":
+            return f"{self.name} is feeling sad and down."
+        elif self.mood == "sleepy":
+            return f"{self.name} is feeling sleepy and ready for a nap."
         else:
-            self.__name = new_name  # changes private attribute to new value
-            print("Name change successful.")
+            return f"{self.name} is feeling {self.mood}."
 
-    def talk(self):
-        """Makes Critter say its name"""
-        print("\nHi, I'm", self.name)
+    @property
+    def description(self):
+        """Returns a description of the Critter"""
+        return f"{self.name} is {self.age} years old and is feeling {self.mood}."
+
 
 def main():
     crit = Critter("Poochie")
-    crit.talk()
+    print(crit.description)
 
-    print("\nMy critter's name is:", end= " ")
-    print(crit.name)
-
-    print("\nAttempting to change my critter's name to Randolph...")
-    crit.name = "Randolph" # successfully changing the name property
-    print("My critter's name is:", end= " ")
-    print(crit.name)
-
-    print("\nAttempting to change my critter's name to the empty string...")
-    crit.name = "" # unsuccessfully changing the name property
-    print("My critter's name is:", end= " ")
-    print(crit.name)
 main()
-
-input("\n\nPress the enter key to exit.")
