@@ -1,6 +1,7 @@
 # Property Critter
 # Demonstrates a PROPERTY, an object with methods that allow indirect access
 #   to attributes and often impose some sort of restriction on that access.
+#
 
 class Critter(object):
     """A virtual pet"""

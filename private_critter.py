@@ -1,4 +1,3 @@
-
 # Private Critter
 # Demonstrates private attributes and private methods
 #   To encourage encapsulation, you can declare attributes or methods as 'private',

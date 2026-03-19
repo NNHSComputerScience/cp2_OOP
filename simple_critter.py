@@ -25,7 +25,7 @@ class Critter:  # class header; class names capitalized by convention
     # 4. Defining a Method
     def talk(self): # must have 'self' parameter as a reference to the object.  
         """Makes the Critter talk"""
-        print("\nHi.  I'm an instance of class Critter named", self.name, "and I'm", self.age, "years old.")
+        print("\nHi.  I'm an insta#nce of class Critter named", self.name, "and I'm", self.age, "years old.")
         print("I'm feeling", self.mood + ".")
 
     # 5. INSTRUCTOR NOTE: ask students to come up with other attributes and methods to add to the class.  
