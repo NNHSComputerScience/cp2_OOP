@@ -4,10 +4,12 @@
 # CONTAINMENT - one object containing other objects.  In this context, our Zoo
 #               objects will contain Critter objects.
 
-class Critter_zoo(object):
+class Critter_zoo():
   """A zoo containing virtual Critter pets"""
-  def __init__(self, n, crits = []):
+  def __init__(self, n, crits = None):
     """initializes a zoo with a name and a list of Critters"""
+    if crits == None:
+      crits = []
     self._name = n
     # the zoo maintains a list of all current critters at the zoo
     self._critters = crits # list containing references to Critter objects
